@@ -11,18 +11,18 @@ final class LoginViewController: UIViewController {
     @IBOutlet var userNameLabel: UITextField!
     @IBOutlet var passwordLabel: UITextField!
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
+    private let username = "User"
+    private let password = "1"
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let settingsVC = segue.destination as? WelcomeViewController else { return }
         settingsVC.welcomeUser = userNameLabel.text
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     @IBAction func logInButtonTapped() {
         guard let inputText = userNameLabel.text, !inputText.isEmpty else {
@@ -33,7 +33,7 @@ final class LoginViewController: UIViewController {
             wrongPassword(with: "Password is empty", andmessage: "Please try again")
             return
         }
-        if userNameLabel.text == "Alex" && passwordLabel.text == "1" {
+        if userNameLabel.text == username && passwordLabel.text == password {
             return
         } else {
             wrongPassword(with: "Incorrect username or password", andmessage: "Please try again")
@@ -41,11 +41,11 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotUserNameButtonTapped() {
-        showUserName(with: "Your Log In is:", andmessage: "Alex")
+        wrongPassword(with: "Your Log In is:", andmessage: "\(username)")
     }
     
     @IBAction func forgotPasswordButtonTapped() {
-        showPass(with: "Your Password is:", andmessage: "1")
+        wrongPassword(with: "Your Password is:", andmessage: "\(password)")
     }
     
     @IBAction  func unwind(for segue: UIStoryboardSegue) {
@@ -58,18 +58,6 @@ final class LoginViewController: UIViewController {
 
 // MARK: - UIAlertController
 extension LoginViewController {
-    private func showUserName(with title: String, andmessage message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
-        alert.addAction(okAction)
-        present(alert, animated: true)
-    }
-    private func showPass(with title: String, andmessage message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Oh, yes!", style: .default)
-        alert.addAction(okAction)
-        present(alert, animated: true)
-    }
     private func wrongPassword(with title: String, andmessage message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
