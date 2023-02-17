@@ -41,11 +41,11 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="OHR-LB-rLT">
-                                <rect key="frame" x="10" y="307.5" width="300" height="29"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="OHR-LB-rLT">
+                                <rect key="frame" x="20" y="307.5" width="280" height="29"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4PO-le-kgP">
-                                        <rect key="frame" x="0.0" y="0.0" width="135" height="29"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="123" height="29"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Forgot User Name?"/>
@@ -54,7 +54,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyA-ie-AXy">
-                                        <rect key="frame" x="165" y="0.0" width="135" height="29"/>
+                                        <rect key="frame" x="166" y="0.0" width="114" height="29"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Forgot Password?"/>
@@ -73,8 +73,8 @@
                             <constraint firstItem="DwO-MF-Tm3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Gsu-9O-bV9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DwO-MF-Tm3" secondAttribute="trailing" constant="20" id="Xh1-2j-BAn"/>
                             <constraint firstItem="OHR-LB-rLT" firstAttribute="top" secondItem="DwO-MF-Tm3" secondAttribute="bottom" constant="10" id="Zco-XH-1vy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OHR-LB-rLT" secondAttribute="trailing" constant="10" id="fQi-QW-hAw"/>
-                            <constraint firstItem="OHR-LB-rLT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="vVC-vp-9pE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OHR-LB-rLT" secondAttribute="trailing" constant="20" id="fQi-QW-hAw"/>
+                            <constraint firstItem="OHR-LB-rLT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vVC-vp-9pE"/>
                         </constraints>
                     </view>
                     <connections>
