@@ -40,8 +40,8 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction  func unwind(for segue: UIStoryboardSegue) {
-        userNameLabel.text = ""
-        passwordLabel.text = ""
+        userNameLabel.text = "User"
+        passwordLabel.text = "1"
     }
    
 
@@ -52,7 +52,7 @@ extension LoginViewController {
     private func wrongPassword(with title: String, andmessage message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            self.passwordLabel.text = ""
+            self.passwordLabel.text = "1"
         }
         alert.addAction(okAction)
         present(alert, animated: true)
