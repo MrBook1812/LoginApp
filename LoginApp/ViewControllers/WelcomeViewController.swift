@@ -16,7 +16,7 @@ final class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        welocomeLabel.text = "Hello, "
+        welocomeLabel.text = "Hello, \(user.person.name) \(user.person.surname)"
         hiLabel.text = "👋"
         setGradientBackground()
     }

@@ -20,6 +20,12 @@ class AboutMeViewController: UIViewController {
         super.viewDidLoad()
 
         setGradientBackground()
+        
+        nameLabel.text = user.person.name
+        surnameLabel.text = user.person.surname
+        workLabel.text = user.person.work
+        departmentLabel.text = user.person.department
+        positionLabel.text = user.person.position
     }
     
     private func setGradientBackground() {
