@@ -33,7 +33,7 @@ class AboutMeViewController: UIViewController {
     
     private func setGradientBackground() {
         let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [UIColor.purple.cgColor, UIColor.systemGray.cgColor]
+        gradientLayer.colors = [UIColor.systemCyan.cgColor, UIColor.systemGray.cgColor]
         gradientLayer.startPoint = CGPoint(x: 0.3, y: 1.0)
         gradientLayer.endPoint = CGPoint(x: 0.3, y: 0.0)
         gradientLayer.locations = [0,1]
