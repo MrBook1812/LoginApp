@@ -14,7 +14,6 @@ final class LoginViewController: UIViewController {
     private let username = "User"
     private let password = "1"
     
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let settingsVC = segue.destination as? WelcomeViewController else { return }
         settingsVC.welcomeUser = userNameLabel.text
@@ -25,14 +24,6 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction func logInButtonTapped() {
-        guard let inputText = userNameLabel.text, !inputText.isEmpty else {
-            wrongPassword(with: "UserName is empty", andmessage: "Please try again")
-            return
-        }
-        guard let inputText = passwordLabel.text, !inputText.isEmpty else {
-            wrongPassword(with: "Password is empty", andmessage: "Please try again")
-            return
-        }
         if userNameLabel.text == username && passwordLabel.text == password {
             return
         } else {

@@ -21,7 +21,7 @@ final class WelcomeViewController: UIViewController {
         setGradientBackground()
     }
     
-    func setGradientBackground() {
+    private func setGradientBackground() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [UIColor.systemGreen.cgColor, UIColor.blue.cgColor]
         gradientLayer.startPoint = CGPoint(x: 0.3, y: 1.0)
@@ -29,9 +29,5 @@ final class WelcomeViewController: UIViewController {
         gradientLayer.locations = [0,1]
         gradientLayer.frame = self.view.bounds
         self.view.layer.insertSublayer(gradientLayer, at: 0)
-    }
-    
-    @IBAction func logOutButtonTapped() {
-        dismiss(animated: true)
     }
 }
