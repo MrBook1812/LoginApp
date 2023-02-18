@@ -14,12 +14,15 @@ class AboutMeViewController: UIViewController {
     @IBOutlet var workLabel: UILabel!
     @IBOutlet var departmentLabel: UILabel!
     @IBOutlet var positionLabel: UILabel!
-    
+    @IBOutlet var photoView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setGradientBackground()
+        
+        photoView.layer.cornerRadius = photoView.frame.height / 2
+        photoView.layer.backgroundColor = UIColor.systemGray.cgColor
         
         nameLabel.text = user.person.name
         surnameLabel.text = user.person.surname
@@ -30,7 +33,7 @@ class AboutMeViewController: UIViewController {
     
     private func setGradientBackground() {
         let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [UIColor.systemGray.cgColor, UIColor.purple.cgColor]
+        gradientLayer.colors = [UIColor.purple.cgColor, UIColor.systemGray.cgColor]
         gradientLayer.startPoint = CGPoint(x: 0.3, y: 1.0)
         gradientLayer.endPoint = CGPoint(x: 0.3, y: 0.0)
         gradientLayer.locations = [0,1]
