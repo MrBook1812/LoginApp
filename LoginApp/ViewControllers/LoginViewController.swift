@@ -11,12 +11,17 @@ final class LoginViewController: UIViewController {
     @IBOutlet var userNameLabel: UITextField!
     @IBOutlet var passwordLabel: UITextField!
     
-    private let username = "User"
-    private let password = "1"
+    private let username = user.username
+    private let password = user.password
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let settingsVC = segue.destination as? WelcomeViewController else { return }
         settingsVC.welcomeUser = userNameLabel.text
+    }
+    
+    override func viewDidLoad() {
+        userNameLabel.text = user.username
+        passwordLabel.text = user.password
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -40,8 +45,8 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction  func unwind(for segue: UIStoryboardSegue) {
-        userNameLabel.text = "User"
-        passwordLabel.text = "1"
+        userNameLabel.text = user.username
+        passwordLabel.text = user.password
     }
    
 
@@ -52,7 +57,7 @@ extension LoginViewController {
     private func wrongPassword(with title: String, andmessage message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            self.passwordLabel.text = "1"
+            self.passwordLabel.text = user.password
         }
         alert.addAction(okAction)
         present(alert, animated: true)
