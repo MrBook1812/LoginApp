@@ -23,7 +23,7 @@ final class WelcomeViewController: UIViewController {
     
     private func setGradientBackground() {
         let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [UIColor.systemGreen.cgColor, UIColor.blue.cgColor]
+        gradientLayer.colors = [UIColor.systemGray.cgColor, UIColor.systemCyan.cgColor]
         gradientLayer.startPoint = CGPoint(x: 0.3, y: 1.0)
         gradientLayer.endPoint = CGPoint(x: 0.3, y: 0.0)
         gradientLayer.locations = [0,1]
